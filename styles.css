@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f8f6f0 0%, #e8e2d5 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #e0d6c7;
+}
+
+.poster-header {
+  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  color: white;
+  padding: 60px 40px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.poster-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+}
+
+.poster-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.poster-subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.poster-content {
+  padding: 50px 40px;
+}
+
+.session {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  padding: 20px;
+  background: #f9f7f3;
+  border-radius: 15px;
+  border-left: 6px solid #e91e63;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.session:hover {
+  transform: translateX(5px);
+}
+
+.session-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e91e63, #c2185b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+  flex-shrink: 0;
+  border: 3px solid #e0d6c7;
+}
+
+.session-info {
+  flex: 1;
+}
+
+.session-date {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.session-guest {
+  font-size: 1rem;
+  color: #e91e63;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.session-topic {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.topic-pill {
+  display: inline-block;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  font-style: normal;
+}
+
+.holiday-break {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  font-style: italic;
+  font-size: 1rem;
+  background: rgba(233, 30, 99, 0.1);
+  border-radius: 10px;
+  margin: 30px 0;
+  border: 1px solid #e0d6c7;
+}
+
+.poster-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.free-badge {
+  display: inline-block;
+  background: #e91e63;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.register-link {
+  display: inline-block;
+  background: #e91e63;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.register-link:hover {
+  background: #c2185b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.host-info {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.decorative-element {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .poster-title {
+    font-size: 2.2rem;
+  }
+
+  .poster-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .poster-header,
+  .poster-content,
+  .poster-footer {
+    padding: 30px 25px;
+  }
+
+  .session {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .session-avatar {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
