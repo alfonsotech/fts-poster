@@ -46,6 +46,9 @@
             margin-top: 20px;
             border: 2px solid rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
           "
           onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'; this.style.transform='translateY(-2px)'"
           onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(0)'"
@@ -107,7 +110,7 @@
 
       <div class="poster-content" style="padding-top: 15px;">
         <h2 style="text-align: center; color: #2c3e50; font-size: 1.5rem; margin-bottom: 30px;">Schedule</h2>
-        <div class="session">
+        <div class="session" id="nancy-elizabeth-session">
           <a
             href="https://substack.com/@nancyelizabeth"
             target="_blank"
@@ -152,7 +155,7 @@
           </div>
         </div>
 
-        <div class="session">
+        <div class="session" id="susie-bright-session">
           <a
             href="https://substack.com/@susiebright"
             target="_blank"
@@ -228,7 +231,7 @@
 
         <div class="holiday-break">Taking a break for the holidays. 🎄</div>
 
-        <div class="session">
+        <div class="session" id="15thcenturyfeminist-session">
           <a
             href="https://substack.com/@15thcenturyfeminist"
             target="_blank"
@@ -273,7 +276,7 @@
           </div>
         </div>
 
-        <div class="session">
+        <div class="session" id="rogue-art-historian-session">
           <a
             href="https://substack.com/@roguearthistorian"
             target="_blank"
@@ -469,7 +472,7 @@
                 value="September 25 - Nancy Elizabeth"
                 style="margin-right: 10px"
               />
-              <strong>September 25, 1pm EST</strong> - Nancy Elizabeth
+              <strong>September 25, 1pm EST</strong> - <a href="#nancy-elizabeth-session" style="color: white; text-decoration: underline;">Nancy Elizabeth</a>
             </label>
 
             <label
@@ -486,7 +489,7 @@
                 value="October 30 - Susie Bright"
                 style="margin-right: 10px"
               />
-              <strong>October 30, 8pm EST</strong> - Susie Bright
+              <strong>October 30, 8pm EST</strong> - <a href="#susie-bright-session" style="color: white; text-decoration: underline;">Susie Bright</a>
             </label>
 
             <label
@@ -503,7 +506,7 @@
                 value="January 29 - 15thCenturyFeminist"
                 style="margin-right: 10px"
               />
-              <strong>January 29, 1pm EST</strong> - 15thCenturyFeminist
+              <strong>January 29, 1pm EST</strong> - <a href="#15thcenturyfeminist-session" style="color: white; text-decoration: underline;">15thCenturyFeminist</a>
             </label>
 
             <label
@@ -520,7 +523,7 @@
                 value="February 26 - Rogue Art Historian"
                 style="margin-right: 10px"
               />
-              <strong>February 26, 8pm EST</strong> - Rogue Art Historian
+              <strong>February 26, 8pm EST</strong> - <a href="#rogue-art-historian-session" style="color: white; text-decoration: underline;">Rogue Art Historian</a>
             </label>
           </div>
 
