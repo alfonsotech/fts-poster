@@ -32,6 +32,26 @@
         <p class="poster-subtitle">
           Join Us in a Discussion of Feminist Texts That Continue to Inspire Us!
         </p>
+        <a
+          href="#signup-form"
+          style="
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+          "
+          onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'; this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(0)'"
+        >
+          Sign Up Now
+        </a>
       </div>
 
       <div
@@ -49,16 +69,17 @@
         "
       >
         <p style="color: #495057; line-height: 1.6; margin-bottom: 15px">
-          Feminist Theory Series 📚 kicks-off again on September 25th, and this
-          time there is a twist! In a continuing effort to build the feminist
-          community here on <em>the stacks</em>, I have invited six of my
-          favorite feminist writers ✨ to join us as special guest-participants.
+          The Feminist Theory Series 📚 kicks-off again on September 25th, and
+          this time there is a twist! In a continuing effort to build the
+          feminist community here on <em>the stacks</em>, I have invited a
+          handful of my favorite feminist writers ✨ to join us as special
+          guest-participants.
         </p>
         <p style="color: #495057; line-height: 1.6; margin-bottom: 15px">
           Each special guest has chosen for us an essay or book chapter in their
-          area of interest — a piece they want to share with others and discuss.
-          We'll be reading texts across many disciplines: film theory, art
-          history, history history, philosophy, and more! 👀
+          area of interest — a piece that inspires them to want to share with
+          others and discuss. We'll be reading texts across many disciplines:
+          film theory, art history, history history, philosophy, and more! 👀
         </p>
 
         <!-- <h3
@@ -84,7 +105,8 @@
         </p> -->
       </div>
 
-      <div class="poster-content">
+      <div class="poster-content" style="padding-top: 15px;">
+        <h2 style="text-align: center; color: #2c3e50; font-size: 1.5rem; margin-bottom: 30px;">Schedule</h2>
         <div class="session">
           <a
             href="https://substack.com/@nancyelizabeth"
@@ -314,15 +336,25 @@
         </div> -->
       </div>
 
-      <div style="position: relative; margin-bottom: -20px; z-index: 2;">
+      <div style="position: relative; margin-bottom: -20px; z-index: 2">
         <img
           src="images/library-scene.png"
           alt="Library scene"
-          style="width: 100%; height: auto; opacity: 0.8; display: block;"
+          style="width: 100%; height: auto; opacity: 0.8; display: block"
         />
       </div>
 
-      <div class="format-details" style="background: #f9f7f3; border-radius: 12px; border: 1px solid #e0d6c7; position: relative; z-index: 1; padding-top: 50px;">
+      <div
+        class="format-details"
+        style="
+          background: #f9f7f3;
+          border-radius: 12px;
+          border: 1px solid #e0d6c7;
+          position: relative;
+          z-index: 1;
+          padding-top: 50px;
+        "
+      >
         <h3>Session Format & Details</h3>
         <ul class="format-list">
           <li>
@@ -360,6 +392,7 @@
           recorded. You must attend to participate.
         </div>
         <form
+          id="signup-form"
           action="https://formspree.io/f/manpwyeg"
           method="POST"
           style="text-align: left; max-width: 400px; margin: 0 auto"
@@ -496,7 +529,7 @@
             class="register-link"
             style="width: 100%; border: none"
           >
-            Sign Me Up
+            Sign Up Now
           </button>
         </form>
 
@@ -541,20 +574,26 @@
       </div>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const selectAllCheckbox = document.getElementById('select-all');
-        const sessionCheckboxes = document.querySelectorAll('input[name="sessions"]');
+      document.addEventListener("DOMContentLoaded", function () {
+        const selectAllCheckbox = document.getElementById("select-all");
+        const sessionCheckboxes = document.querySelectorAll(
+          'input[name="sessions"]'
+        );
 
-        selectAllCheckbox.addEventListener('change', function() {
-          sessionCheckboxes.forEach(checkbox => {
+        selectAllCheckbox.addEventListener("change", function () {
+          sessionCheckboxes.forEach((checkbox) => {
             checkbox.checked = selectAllCheckbox.checked;
           });
         });
 
-        sessionCheckboxes.forEach(checkbox => {
-          checkbox.addEventListener('change', function() {
-            const allChecked = Array.from(sessionCheckboxes).every(cb => cb.checked);
-            const noneChecked = Array.from(sessionCheckboxes).every(cb => !cb.checked);
+        sessionCheckboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            const allChecked = Array.from(sessionCheckboxes).every(
+              (cb) => cb.checked
+            );
+            const noneChecked = Array.from(sessionCheckboxes).every(
+              (cb) => !cb.checked
+            );
 
             if (allChecked) {
               selectAllCheckbox.checked = true;
