@@ -141,10 +141,10 @@ body {
   color: #6c757d;
   font-style: italic;
   font-size: 1rem;
-  background: rgba(233, 30, 99, 0.1);
-  border-radius: 10px;
+  background: rgba(180, 166, 170, 0.1);
+  /* border-radius: 10px; */
   margin: 30px 0;
-  border: 1px solid #e0d6c7;
+  /* border: 1px solid #e0d6c7; */
 }
 
 .format-details {
